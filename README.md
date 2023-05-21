@@ -2,6 +2,7 @@
 
 ## Stack
 
+![Conda Logo](/docs/conda.jpg "Conda Logo") 
 ![Matplotlib Logo](/docs/matplotlib.jpg "Matplotlib Logo") 
 ![Numpy Logo](/docs/numpy.jpg "Numpy Logo")
 ![Pandas Logo](/docs/pandas.jpg "Pandas Logo")
