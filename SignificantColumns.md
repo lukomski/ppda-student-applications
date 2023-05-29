@@ -10,21 +10,21 @@
 8. Word formal in substantation
 9. Word progress in substantation
 10. Was the appeal submitted
-11. Attachments
+11. Attachments -> Float64
 12. Registration semester
 13. Semester of study
-14. Missing ECTS
+14. Missing ECTS -> Float64
 15. ECTS in recent semester
-16. Total ECTS
-17. Missing subjects from sem 1
+16. Total ECTS -> Float64
+17. Missing subjects from sem 1 -> Float64
 18. Missing subjects from sem 2
-19. Missing subjects from sem 3
+19. Missing subjects from sem 3 -> Float64
 20. Missing subjects from sem 4
 21. Missing subjects from sem 5
 22. Missing subjects from sem 6
 23. Total missing subjects
 24. Missing subjects codes
-25. Thesis count
+25. Thesis count -> Float64
 26. Level of thesis progress
 27. Word family in substantation
 28. Word health in substantation
@@ -48,6 +48,6 @@
 4. Student
 5. Person recevienbg
 6. Person processing
-7. How many changes of statuses
+7. How many changes of statuses -> Float64
 
 

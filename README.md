@@ -16,7 +16,11 @@ conda env create --file environment.yaml
 ```
 ### Activate
 ```
-source activate ppda
+conda activate ppda
+```
+### Deactivate
+```
+conda deactivate
 ```
 ### Export updated env
 
