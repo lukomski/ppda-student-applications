@@ -1,19 +1,19 @@
 ## Significant columns
 | Nr 	|                                  Column name 	|        Comment       	|      Status     	|
 |:---:	|---------------------------------------------:	|:-----------------:	|:----------------:	|
-|  1  	|                                Mode of study 	|                   	|                  	|
-|  2  	| Level of study (I - Engineering, M - Master) 	|                   	|                  	|
-|  3  	|                    Language                  	|                   	|                  	|
-| 4   	|  Specialization                              	|                   	|                  	|
+|  1  	|                                Mode of study 	|                   	|:heavy_check_mark:	|
+|  2  	| Level of study (I - Engineering, M - Master) 	|                   	|:heavy_check_mark:	|
+|  3  	|                    Language                  	|                   	|:heavy_check_mark:	|
+| 4   	|  Specialization                              	|                   	|:heavy_check_mark:	|
 | 5   	|  Application status -                        	|  PREDICTED VALUE  	|:heavy_check_mark: |
-| 6   	|  Type of application                         	|                   	|                  	|
-| 7   	|  Word regulation in substantation            	|                   	|                  	|
-| 8   	|  Word formal in substantation                	|                   	|                  	|
-| 9   	|  Word progress in substantation              	|                   	|                  	|
-| 10  	|  Was the appeal submitted                    	|                   	|                  	|
+| 6   	|  Type of application                         	|                   	|:heavy_check_mark:	|
+| 7   	|  Word regulation in substantation            	|                   	|:heavy_check_mark:	|
+| 8   	|  Word formal in substantation                	|                   	|:heavy_check_mark:	|
+| 9   	|  Word progress in substantation              	|                   	|:heavy_check_mark:	|
+| 10  	|  Was the appeal submitted                    	|                   	|:heavy_check_mark:	|
 | 11  	|  Attachments -                               	|  Float64          	|:heavy_check_mark:	|
-| 12  	|  Registration semester                       	|                   	|                  	|
-| 13  	|  Semester of study                           	|                   	|                  	|
+| 12  	|  Registration semester                       	|                   	|:heavy_check_mark:	|
+| 13  	|  Semester of study                           	|                   	|:heavy_check_mark:	|
 | 14  	|  Missing ECTS -                              	|  Float64          	|:heavy_check_mark:	|
 | 15  	|  ECTS in recent semester                     	|                   	|                  	|
 | 16  	|  Total ECTS -                                	|  Float64          	|:heavy_check_mark:	|
