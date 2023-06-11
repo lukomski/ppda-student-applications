@@ -1,0 +1,8 @@
+\subsection{Decision}
+Our first step was to recognize if the decision of Dean was positive or negative.
+From all of text representation of decision, we  choose  as positive decisions: 'Zamkniêty - decyzja pozytywna', 'Zamkniêty - inne', 'Decyzja pozytywna - oczekuje na realizacjê' and as negative desicions: 'Zamkniêty - decyzja negatywna', 'Zamkniêty - odrzucony formalnie', 'Zwrócony do korekty'.
+We made a new column of type boolean where we indicate if decision was positive or negative.
+
+\subsection{Data transformation}
+There is 42 columns in dataset. Most of columns data types are \textit{string} like in "Mode of study", "Language", "Type of application", and some of them are of type \textit{float64}, e.g. "Attachments", "How many changes of statuses", "Missing ECTS".
+Using \textit{pd.factorize()} method unique values from each columns were extracted, and their codes. Replacing existing values from column, with the code value. In that way text data was converted into categorical data. That method was used to transform data of columns: 'Mode of study ', 'Level of study (I - Engineering, M - Master)', 'Language' , 'Specialization', 'Type of application', 'Word regulation in substantation', 'Word formal in substantation', 'Word progress in substantation', 'Was the appeal submitted', 'Registration semester', 'Semester of study', 'Word family in substantation', 'Word health in substantation', 'Word family in substantation.1', 'Word accident in substantation', 'Word work in substantation', 'Word promise  in substantation'.
