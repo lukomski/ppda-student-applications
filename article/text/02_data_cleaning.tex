@@ -1,8 +1,47 @@
 \subsection{Decision}
-Our first step was to recognize if the decision of Dean was positive or negative.
-From all of text representation of decision, we  choose  as positive decisions: 'Zamkniêty - decyzja pozytywna', 'Zamkniêty - inne', 'Decyzja pozytywna - oczekuje na realizacjê' and as negative desicions: 'Zamkniêty - decyzja negatywna', 'Zamkniêty - odrzucony formalnie', 'Zwrócony do korekty'.
-We made a new column of type boolean where we indicate if decision was positive or negative.
+The first step was to recognize if the decision of Dean is positive or negative.
+The conversion was made according to table~\ref{table:positive_negative}.
+A new column of type boolean was created which indicates whether decision is positive or negative.
+It turned out that the most numerous group of answers from the dean's office is status closed from unkown reasons as it is visible on Fig.~\ref{fig:application_status_countplot}. The dataset with decision column was very unbalanced what can be seen Fig.~\ref{fig:decision_countplot}. The balanced dataset was needed the it positive was reduced to the negative decision quantity. This resulted in a balanced set of decisions as in Fig~\ref{fig:balanced_decision_countplot}.
+
+\begin{figure}
+    \includegraphics[width=0.5\textwidth]{img/application_status_countplot.png}
+    \caption{Application status countplot}
+    \label{fig:application_status_countplot}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=0.5\textwidth]{img/decision_countplot.png}
+    \caption{Decision countplot}
+    \label{fig:decision_countplot}
+\end{figure}
+
+\begin{figure}
+    \includegraphics[width=0.5\textwidth]{img/balanced_decision_countplot.png}
+    \caption{Balanced decision countplot}
+    \label{fig:balanced_decision_countplot}
+\end{figure}
+
+\begin{table}
+    \caption{Convert status into dean's decision.}
+    \label{table:positive_negative}
+    \begin{tabular}{|p{0.2\textwidth}|p{0.2\textwidth}|}
+        \hline
+            \textbf{positive} & \textbf{negative} \\
+        \hline
+            Zamkniety - decyzja pozytywna & Zamkniety - decyzja negatywna \\ 
+        \hline
+            Zamkniety - inne & Zamkniety - odrzucony formalnie \\
+        \hline
+            Decyzja pozytywna - oczekuje na realizacje & Zwrócony do korekty \\
+        \hline
+        
+    \end{tabular}
+    
+\end{table}
+
 
 \subsection{Data transformation}
-There is 42 columns in dataset. Most of columns data types are \textit{string} like in "Mode of study", "Language", "Type of application", and some of them are of type \textit{float64}, e.g. "Attachments", "How many changes of statuses", "Missing ECTS".
-Using \textit{pd.factorize()} method unique values from each columns were extracted, and their codes. Replacing existing values from column, with the code value. In that way text data was converted into categorical data. That method was used to transform data of columns: 'Mode of study ', 'Level of study (I - Engineering, M - Master)', 'Language' , 'Specialization', 'Type of application', 'Word regulation in substantation', 'Word formal in substantation', 'Word progress in substantation', 'Was the appeal submitted', 'Registration semester', 'Semester of study', 'Word family in substantation', 'Word health in substantation', 'Word family in substantation.1', 'Word accident in substantation', 'Word work in substantation', 'Word promise  in substantation'.
+At first columns which definitely should not be significant was removed. For example 'student' column was marked as not significant. The decision should not be performed according to ID of the person. All columns which should be significant was converted into numerical representation.
+There was 42 columns in dataset. Only a few columns in the dataset were numerical. Other were categorical. Using \textit{pd.factorize()} method unique values from each columns were extracted and converted into categorical codes.
+There was two columns that was marked as significant, but was not converted into numberical representation due to complexity of the solutions. One of those was 'Level of thesis progress' which was not structured sentences with description about level of the thesis. The decision was made not to sink into this trying to convert it. The second column was 'Missing subjects codes' which had a form of `['A,B,C','C,D']` where letters are subject codes.
