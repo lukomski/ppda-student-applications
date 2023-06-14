@@ -1,8 +1,21 @@
 % selection and short theoretical description of two algorithms for the evaluation
 % description of the benchmarking experiment - what are you going to check, verify and how you are going to get reasonable the results (eg. performance (classification metrics)),
-According to sklearn library recomandation \cite{sklearn} and \cite{towards_class}, we choose to test dataset with SVM model, Decision Tree Classifier and with KNN Classificator.
-% generated - to be fixed
-The experiment will proceed in several steps. Firstly, the dataset will be preprocessed, involving tasks such as data cleaning, handling missing values, and feature engineering. This step is crucial in ensuring the quality and integrity of the data used for training and testing the ML models.
-Next, the dataset will be divided into training and testing sets using an appropriate splitting technique, such as stratified sampling, to maintain the distribution of positive and negative decisions in both sets. The training set will be used to train the ML models, while the testing set will be kept separate and used later for evaluating the models' performance.
-Each ML model (SVM, Decision Tree Classifier, and KNN Classifier) will then be trained on the training set using suitable hyperparameter tuning techniques to optimize their performance. Cross-validation may also be employed to estimate the models' generalization capabilities.
-Once the models are trained, they will be evaluated using various performance metrics, including accuracy, precision, recall, and F1 score. These metrics provide a comprehensive understanding of the models' predictive capabilities and their ability to correctly classify positive and negative decisions made by the Dean.
+According to sklearn library \cite{sklearn} and other\cite{towards_class} recomandation, the choosen was taken to train dataset with SVM model, Decision Tree Classifier and with KNN Classificator.
+
+\subsection{SVM}
+
+Support Vector Machine is a supervised machine learning algorithm used for classification and regression tasks. It finds an optimal hyperplane to separate data into different classes, using techniques like the kernel trick to handle non-linearly separable data\cite{tomaszkacmajor}. SVMs have advantages such as handling high-dimensional data and generalizing well with small datasets\cite{Zou}.
+
+The basic idea behind SVM is to find an optimal hyperplane that separates the data points into different classes. A hyperplane is a decision boundary that divides the feature space into regions representing different classes. SVM aims to find the hyperplane that maximizes the margin, which is the distance between the hyperplane and the closest data points from each class. These closest data points are called support vectors\cite{PMC5822181}.
+
+\subsection{Decision Tree Clasifier}
+
+A Decision Tree Classifier is a machine learning algorithm that creates a tree-like model to classify data\cite{ibm_trees_decision_tree}. It recursively splits the dataset based on features, using decision rules to determine class labels. Decision trees are interpretable and easy to understand, but may overfit and perform poorly with high-dimensional or noisy data \cite{sklearn_tree}.
+
+During the training phase, the decision tree classifier learns the decision rules by fitting the data to the tree structure \cite{Kotsiantis}. It continues splitting the data until a stopping criterion is met, such as reaching a maximum tree depth or when further splitting does not improve the classification accuracy. 
+
+\subsection{KNN Classifier}
+
+K-Nearest Neighbors Classifier is a simple and versatile algorithm for classification. It assigns a class label to a new data point based on the majority vote of its k nearest neighbors\cite{AbuAlfeilat}. KNN is easy to implement but can be computationally expensive for large datasets. It adapts well to different data types and handles multi-class classification\cite{Tsoumakas}.
+
+KNN classifiers have several advantages, including their simplicity and ease of implementation. They can handle multi-class classification and can adapt to any kind of data. KNN is also a lazy learner, meaning it does not require an explicit training phase and can quickly adapt to new data. However, KNN can be computationally expensive, especially for large datasets, as it requires calculating distances for each prediction. Additionally, determining the optimal value of k and handling imbalanced data can be challenges in KNN classification\cite{Syaliman}.

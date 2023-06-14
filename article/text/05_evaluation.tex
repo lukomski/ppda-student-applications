@@ -1,25 +1,33 @@
 % tables with prediction results - showing that you have correctly applied the methods,
 % tables evaluating performance (prediction metrics) for different types of application forms and both algorithms – this is the main part of the benchmark section,
 
+The SVM model demonstrates an accuracy, precision, and recall of 0.64. This implies that it accurately predicts the class labels for 64\% of the data points. When it assigns a positive class, it is correct 64\% of the time, and it successfully identifies 64\% of the instances belonging to the positive class.
+
+In the case of the Decision Tree Classifier, it achieves an accuracy, precision, and recall of 0.68. This signifies that it effectively predicts the class labels for 68\% of the data points. When it assigns a positive class, it is correct 68\% of the time, and it accurately identifies 68\% of the positive class instances.
+
+As for the KNN Classifier, it exhibits an accuracy, precision, and recall of 0.69. This indicates that it correctly predicts the class labels for 69\% of the data points. When it assigns a positive class, it is correct 69\% of the time, and it successfully identifies 69\% of the positive class instances.
+
+These metrics provide an assessment of the performance of each model in terms of their accuracy, precision, and recall, revealing their ability to correctly classify instances and predict positive class labels.
+
 \begin{figure}
 \includegraphics[width=0.5\textwidth]{img/svm_pred.png}
 \caption{SVM model prediction}
-\label{fig}
+\label{fig:svm_cm}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=0.5\textwidth]{img/dec_pred.png}
 \caption{Decision Tree Classifier prediction}
-\label{fig}
+\label{fig:dec_cm}
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=0.5\textwidth]{img/knn_pred.png}
 \caption{KNN Classifier prediction}
-\label{fig}
+\label{fig:knn_cm}
 \end{figure}
 
-\begin{table}[htbp]
+\begin{table}
     \centering
     \caption{Comparison of ML Models}
     \label{tab:ml_comparison}
@@ -28,22 +36,7 @@
         \textbf{Model} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} \\
         \hline
         SVM & 0.64 & 0.64 & 0.64 \\
-        Decision Tree Classifier & 0.72 & 0.73 & 0.73 \\
-        KNN Classifier & 0.69 & 0.69 & 0.69 \\
-        \hline
-    \end{tabular}
-\end{table}
-
-\begin{table}[htbp]
-    \centering
-    \caption{Comparison of ML Models}
-    \label{tab:ml_comparison}
-    \begin{tabular}{lccc}
-        \hline
-        \textbf{Model} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} \\
-        \hline
-        SVM & 0.64 & 0.64 & 0.64 \\
-        Decision Tree Classifier & 0.72 & 0.73 & 0.73 \\
+        Decision Tree Classifier & 0.68 & 0.68 & 0.68 \\
         KNN Classifier & 0.69 & 0.69 & 0.69 \\
         \hline
     \end{tabular}
