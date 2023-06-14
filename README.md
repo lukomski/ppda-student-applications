@@ -1,4 +1,4 @@
-# Python Programming and Data Analysys - Final project
+# Python Programming and Data Analysis - Final project
 
 ## Stack
 
